@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finac</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
+
+<body>
+    <div 
+class="sidebar" 
+id="sidebar"
+>
+        <button 
+class="close-btn" 
+onclick="toggleNav()">×</button>
+        <a href="#expenses">
+Expenses
+</a>
+        <a href="#goals">
+Goals
+</a>
+        <a href="#reports">
+Reports
+</a>
+    </div>
+
+    <div 
+class="main-content"
+>
+        <button 
+class="open-btn" 
+onclick="toggleNav()"
+>☰</button>
+        <h2><i>Welcome to Your Finance Tracker</i></h2>
+        <h1><b>FINAC</b></h1>
+<p>Manage your expenses, set savings goals, and keep an eye on your financial health!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
