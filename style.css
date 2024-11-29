@@ -17,6 +17,7 @@ body {
 }
 .sidebar:hover {
     background-color: #222;
+  transform: translateX(10px);
 }
 
 .sidebar{
@@ -53,8 +54,17 @@ font-size: 30px;
     background: none;
     margin: 20px;
 }
-
 .main-content {
-    padding: 20px;
+    padding: 40px;
     transition: margin-left 0.3s;
+    text-align: center;
+}section {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+section h2 {
+    color: #2a2a72;
