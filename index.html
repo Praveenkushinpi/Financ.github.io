@@ -1,79 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
+  <meta charset="UTF-8">
+  <title>Finac</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finac</title>
+
+    <title>Finance Tracker</title>
+
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
-
 <body>
-    <div 
-class="sidebar" 
-id="sidebar"
->
-        <button 
-class="close-btn" 
-onclick="toggleNav()">×</button>
-        <a href="#home"
->Home</a>
-        <a href="#expenses"
->Expenses</a>
-        <a href="#weekly-reports"
->Weekly Reports</a>
-        <a href="#earnings"
->Earnings</a>
-        <a href="#saving-goals"
->Saving Goals</a>
-        <a href="#about"
->About</a>
-        <a href="#contact"
->Contact</a>
+<header class="header">
+
+    <div class="logo">
+
+        <img src="https://cloud-9u5xfgmht-hack-club-bot.vercel.app/0psx_20241130_232601.jpeg" alt="Logo">
+
     </div>
 
-    <div 
-class="main-content"
->
-        <button 
-class="open-btn" 
-onclick="toggleNav()"
->☰</button>
+    <div class="name">
+
+        <h1>FINAC</h1>
+
+    </div>
+
+</header>
+  <hr>
+    <div class="sidebar" id="sidebar">
+
+        <button class="close-btn" onclick="toggleNav()">×</button>
+        <a href="#Home">Home</a>
+        <a href="#expenses">Expenses</a>
+        <a href="#Reports">Reports</a>
+        <a href="#earnings">Earnings</a>
+        <a href="#Goals">Goals</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+<a href="Overall-Stats">Overall Stats</a>
+    </div>
+
+    <div class="content">
+
+        <button class="open-btn" onclick="toggleNav()">☰</button>
+<section id="Home ">
         <h2><i>Welcome to Your Finance Tracker</i></h2>
-        <h1><b>FINAC</b></h1>
-<p>Manage your expenses, set savings goals, and keep an eye on your financial health!</p>
+        <h1>FINAC</h1>
+        <p>Manage your expenses, set savings goals, and monitor your financial health!</p>
+</section >
+        <section id="expenses">
+<div class ="expenses">
+            <h2>Expenses</h2>
+            <p>Track all your expenses here.</p>
+    <div id="expense-form">
+        <input type="text" id="expense-name" placeholder="Expense Name" />
+        <input type="number" id="expense-amount" placeholder="Amount" />
+        <button onclick="logExpense()">save</button>
     </div>
-  <section id="expenses">
-            <h2><b>Expenses</b></h2>
-            <p><i>Track all your expenses here.</i></p>
-  </section>
+        </section>
+</div >
+    
+           <section id="Overall-Stats">
+             <div class ="Overall-Stats ">
+    <h2>Overall Stats</h2>
 
-  <section id="weekly-reports">
-            <h2><b>Weekly Reports</b></h2>
-            <p><i>View detailed weekly reports and insights.</i></p>
-  </section>
+    <p id="total-expenses">Total Expenses: $0.00</p>
 
+    <p id="total-earnings">Total Earnings: $0.00</p>
+
+    <p id="total-savings">Total Savings: $0.00</p>
+
+</section>
+        </div>
+        <section id="Reports">
+<div class ="reports">
+            <h2>Weekly Reports</h2>
+            <p>View detailed weekly reports and insights.</p>
+    <div id="todays-expenses">
+        <h3><b>Today's Expenses</b></h3>
+        <ul id="todays-expenses-list"></ul>
+    </div>
+    <div id="weekly-expenses">
+ <h3><b>Weekly Expenses</b></h3>
+        <ul id="weekly-expenses-list"></ul>
+    </div>
+
+    <div id="monthly-expenses">
+
+        <h3><b>Monthly Expenses</b></h3>
+
+        <ul id="monthly-expenses-list"></ul>
+
+    </div>
+
+        </section>
+</div >
         <section id="earnings">
-            <h2><b>Earnings</b></h2>
-            <p><i>Monitor your income and earnings.</i></p>
-        </section>
+<div class ="earnings">
+            <h2>Earnings</h2>
 
-        <section id="saving-goals">
-            <h2><b>Saving Goals</b></h2>
-            <p><i>Set and track your saving goals.</i></p>
-        </section>
+            <p>Monitor your income and earnings.</p>
 
+    <input type="text" id="earning-name" placeholder="Earning Name">
+
+    <input type="number" id="earning-amount" placeholder="Amount">
+
+    <button onclick="logEarning()">Log Earning</button>
+
+    <ul id="earnings-list"></ul>
+
+</section>
+      
+</div >
+        <section id="Goals">
+<div class ="goals">
+            <h2>Saving Goals</h2>
+
+            <p>Set and track your saving goals.</p>
+
+    <input type="number" id="goal-amount" placeholder="Goal Amount">
+    <button onclick="setSavingGoal()">Set Goal</button>
+    <p id="goal-display">No goal set.</p>
+    <p id="goal-progress"></p>
+
+</section>
+        
+</div >
         <section id="about">
-            <h2><b>About</b></h2>
-            <p><i>Learn more about this finance tracker and its features.</i></p>
+<div class ="about">
+            <h2>About</h2>
+            <p>Learn more about this finance tracker and its features.</p>
         </section>
-
+          </div >
+<div class = "contact" >
         <section id="contact">
-            <h2><b>Contact</b></h2>
+            <h2><b>Contact</h2></b>
             <p><i>Get in touch with us.</i></p>
-<p> emali@___ Praveen.kumarj2x@gmail.com </p>
+            <p><b>Email: example@finac.com</b></p>
         </section>
+</div >
     </div>
-    <script src="script.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
